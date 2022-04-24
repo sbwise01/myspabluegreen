@@ -13,4 +13,4 @@ Test of lambda edge functions to support blue green S3 origin of a JavaScript si
 1. For each folder under `files/web`, do the following to deploy the blue and green version of the JavaScipt app to blue/green bucket folders:
    1. run `npm run build`
    1. cd to build folder
-   1. run `aws sync . s3://brad-web-bucket/blue/` or `aws sync . s3://brad-web-bucket/green/` based on parent folder name
+   1. run `aws sync . s3://fogs-web-bucket/blue/` or `aws sync . s3://fogs-web-bucket/green/` based on parent folder name
