@@ -11,24 +11,22 @@ terraform {
   required_version = "~> 0.12.31"
 
   backend "s3" {
-    bucket  = "bw-terraform-state-us-east-1"
+    bucket  = "brad-terraform-state-us-east-1"
     key     = "spabluegreen.tfstate"
     region  = "us-east-1"
-    profile = "foghorn-io-brad"
   }
 }
 
 locals {
-  parent_domain_name = "aws.bradandmarsha.com"
+  parent_domain_name = "superscalability.com"
   app_zone_name      = "app.${local.parent_domain_name}"
-  buckets_prefix     = "brad"
+  buckets_prefix     = "fogs"
 }
 
 data "aws_caller_identity" "current" {}
 
-resource "aws_route53_zone" "parent_zone" {
-  name              = local.parent_domain_name
-  delegation_set_id = "N03386422VXZJKGR4YO18"
+data "aws_route53_zone" "parent_zone" {
+  name         = local.parent_domain_name
 }
 
 resource "aws_route53_zone" "app_zone" {
@@ -40,7 +38,7 @@ resource "aws_route53_record" "app_zone_delegation" {
   name            = local.app_zone_name
   ttl             = 300
   type            = "NS"
-  zone_id         = aws_route53_zone.parent_zone.id
+  zone_id         = data.aws_route53_zone.parent_zone.id
   records         = aws_route53_zone.app_zone.name_servers
 }
 
