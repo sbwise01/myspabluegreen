@@ -14,3 +14,6 @@ Test of lambda edge functions to support blue green S3 origin of a JavaScript si
    1. run `npm run build`
    1. cd to build folder
    1. run `aws sync . s3://fogs-web-bucket/blue/` or `aws sync . s3://fogs-web-bucket/green/` based on parent folder name
+
+## Credit
+The provided JavaScript application in based in part on examples provided by https://upmostly.com/tutorials/react-hello-world-your-first-react-app and https://www.digitalocean.com/community/tutorials/how-to-handle-routing-in-react-apps-with-react-router
