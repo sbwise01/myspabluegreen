@@ -2,10 +2,8 @@
 Test of lambda edge functions to support blue green S3 origin of a JavaScript single page application (SPA)
 
 ## Testing URLs in foghorn-io-brad account
-1. https://www.app.aws.bradandmarsha.com/
-1. https://www-test.app.aws.bradandmarsha.com/
-1. https://static-content.app.aws.bradandmarsha.com/image.jpg
-1. https://static-content-test.app.aws.bradandmarsha.com/image.jpg
+1. https://www.app.superscalability.com/
+1. https://www-test.app.superscalability.com/
 
 
 ## Deployment
