@@ -12,7 +12,7 @@ terraform {
 
   backend "s3" {
     bucket  = "bw-terraform-state-us-east-1"
-    key     = "edgelambda.tfstate"
+    key     = "spabluegreen.tfstate"
     region  = "us-east-1"
     profile = "foghorn-io-brad"
   }
